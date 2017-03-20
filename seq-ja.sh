@@ -2,6 +2,7 @@
 #
 # SGE job script: sequential job array
 #
+
 #$ -j y
 #$ -o stdout.$JOB_ID.$SGE_TASK_ID
 #$ -cwd
@@ -14,6 +15,7 @@
 # - Each job has the same job number but a different task ID
 #   (environment variable $SGE_TASK_ID defined at runtime).
 #   The range of the task IDs is set by the "-t" option above.
+# - Add additional 'module load' as needed
 
 source /u/local/Modules/default/init/modules.sh
 module load intel
