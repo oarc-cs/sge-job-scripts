@@ -12,6 +12,7 @@
 # - The h_data value cannot exceed the physical memory size of the
 #   compute node being requested. 
 # - Add additional 'module load' as needed
+# - Replace 'a.out' with the actual executable file name
 
 source /u/local/Modules/default/init/modules.sh
 module load intel

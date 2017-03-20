@@ -13,6 +13,7 @@
 # - Number of slots (-pe) cannot exceeds the total number of CPU cores of the
 #   compute node being requested
 # - Add additional 'module load' as needed
+# - Replace 'a.out' with the actual executable file name
 
 source /u/local/Modules/default/init/modules.sh
 module load intel

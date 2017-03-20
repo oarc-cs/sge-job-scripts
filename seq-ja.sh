@@ -16,6 +16,7 @@
 #   (environment variable $SGE_TASK_ID defined at runtime).
 #   The range of the task IDs is set by the "-t" option above.
 # - Add additional 'module load' as needed
+# - Replace 'a.out' with the actual executable file name
 
 source /u/local/Modules/default/init/modules.sh
 module load intel
