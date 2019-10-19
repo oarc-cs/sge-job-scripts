@@ -8,5 +8,8 @@
 #$ -pe dc* 8
 
 # put your commands below, e.g.
+source /u/local/Modules/default/init/modules.sh
+module load intel/18.0.3
 date
-
+which mpirun
+mpirun -n $NSLOTS hostname

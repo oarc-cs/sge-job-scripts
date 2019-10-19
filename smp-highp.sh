@@ -10,4 +10,4 @@
 
 # put your commands below, e.g.
 date
-
+hostname
