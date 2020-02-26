@@ -1,6 +1,6 @@
 #!/bin/bash
 #$ -l h_rt=01:00:00
-#$ -l h_data=2G
+#$ -l h_data=2G,exclusive
 #$ -N job_name
 #$ -cwd
 #$ -o stdout.$JOB_ID
