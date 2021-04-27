@@ -3,7 +3,6 @@
 #$ -cwd
 #$ -N jupyter-c6
 #$ -j y
-#$ -o /dev/null
 #
 # Please see the instructions in "nb6.md"
 
