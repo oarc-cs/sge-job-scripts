@@ -40,12 +40,12 @@ The output will look like:
 ```
 
 We will need this information in the next steps, in particular, the port 
-number i.e. "12345" and the token `dee34...2cd`. You may see multiple entries
+number i.e. `12345` and the token `dee34...2cd`. You may see multiple entries
 if you are running multiple notebooks on the same compute node.
  
 
  **NOTE**: the port number in the last command above could be different from
- the "--port=12345" option specified in the job script, since Jupyter will 
+ the `--port=12345` option specified in the job script, since Jupyter will 
  automatically retry to find available ports. Always the port number
  given by `jupyter notebook list` command.
 
@@ -59,7 +59,7 @@ $ ssh -f -N -L 12345:nXXX:12345 user_name@login1.hoffman2.idre.ucla.edu
 
 (adjust the port number accordingly. See also "Additional Information" below.)
 
-Now point your web browser at: http://localhost:12345
+Now point your web browser at: `http://localhost:12345`
 
 When prompted, enter token sting from above, e.g. `dee346608015366d1be7f2dd69743e83cc3578e34476c2cd`.
 
