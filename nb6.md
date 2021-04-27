@@ -20,19 +20,14 @@ Wait for the job to start.
 
 ## Step 2
 
-After the job is started (on compute node nXXXX), i.e. in "r" state as shown by
+Confirm that the job is started (on compute node nXXXX), i.e. in "r" state as 
+shown by either the command `qstat -u $USER` or `myjobs`.
 
-```
-$ qstat -u $USER
-```
-
-issue this command on the login node to find out the actual port and token
-the notebook is using:
+Open another terminal on the local computer, and issue the command:
 
 ```
 $ ssh nXXX /u/local/apps/anaconda3/2020.02/bin/jupyter notebook list
 ```
-
 
 The output will look like:
  
