@@ -8,8 +8,10 @@
 # Please see the instructions in "nb6.md"
 
 unset XDG_RUNTIME_DIR
+
 source /u/local/Modules/default/init/modules.sh
 module load anaconda3/2020.02
+# add additional "module load" or activate virtual environment as needed by the notebook
 
 # To run notebook INSECURELY without password/token, add: --NotebookApp.token='' --NotebookApp.password=''
 # The actual port number may be different, since Jupyter automatically retries (see --port-retries)
