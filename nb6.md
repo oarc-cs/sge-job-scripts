@@ -20,7 +20,7 @@ Wait for the job to start.
 
 ## Step 2
 
-Confirm that the job is started (on compute node nXXXX), i.e. in "r" state as 
+Confirm that the job has started (on compute node nXXXX), i.e. in "r" state as 
 shown by either the command `qstat -u $USER` or `myjobs`.
 
 Open another terminal on the local computer, and issue the command:
