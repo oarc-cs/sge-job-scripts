@@ -54,12 +54,12 @@ if you are running multiple notebooks on the same compute node.
 On your local computer, run the command (or the equivalent on Windows), e.g.
 
 ```
-$ ssh -f -N -L 12345:nXXX:12345 user_name@login1.hoffman2.idre.ucla.edu
+$ ssh -f -N -L 11111:nXXX:12345 user_name@login1.hoffman2.idre.ucla.edu
 ```
 
 (adjust the port number accordingly. See also "Additional Information" below.)
 
-Now point your web browser at: `http://localhost:12345`
+Now point your web browser at: `http://localhost:11111`
 
 When prompted, enter token string from above, e.g. `dee346608015366d1be7f2dd69743e83cc3578e34476c2cd`.
 
@@ -83,10 +83,10 @@ In the port forwarding command syntax, `ssh -f -N -L PPPP:nXXX:QQQQ ...`,
 the first number PPPP is your local computer's port, and the second number QQQQ is
 the port number of Hoffman2's compute node running Jupyter notebook (as shown
 by the "jupyter notebook list" command above). In case your local port is not
-available, you can simply try a new port number, e.g. changing it to 12348:
+available, you can simply try a new port number, e.g. changing it to `11112` (instead of `11111`):
 
 ```
- $ ssh -f -N -L 12348:nXXX:12345
+ $ ssh -f -N -L 11112:nXXX:12345
 ```
 
-In this case, `12348` is your local port number, so point your browser to `http://localhost:12348` to connect to the notebook.
+In this case, `11112` is your local port number, so point your browser to `http://localhost:11112` instead to connect to the notebook.
