@@ -61,7 +61,7 @@ $ ssh -f -N -L 12345:nXXX:12345 user_name@login1.hoffman2.idre.ucla.edu
 
 Now point your web browser at: `http://localhost:12345`
 
-When prompted, enter token sting from above, e.g. `dee346608015366d1be7f2dd69743e83cc3578e34476c2cd`.
+When prompted, enter token string from above, e.g. `dee346608015366d1be7f2dd69743e83cc3578e34476c2cd`.
 
 
 ## Step 4
