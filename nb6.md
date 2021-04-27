@@ -30,8 +30,9 @@ issue this command on the login node to find out the actual port and token
 the notebook is using:
 
 ```
-$ ssh nXXXX jupyter notebook list
+$ ssh nXXX /u/local/apps/anaconda3/2020.02/bin/jupyter notebook list
 ```
+
 
 The output will look like:
  
