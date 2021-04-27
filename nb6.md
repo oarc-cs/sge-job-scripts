@@ -8,12 +8,12 @@ need to be issued, as instructed below.
 
 ## Step 1
 
-Modify the job script, such as the run time `h_rt`, memory size `h_data`, the
+Modify the job script, `nb6.sh`, such as the run time `h_rt`, memory size `h_data`, the
 `module load` (to load all othe modules your jupyter notebook will need at 
-runtime) to your liking. Then submit this job by the command:
+runtime) to your liking. Then submit the job by the command:
 
 ```
-$ qsub nb6.sh
+$ qsub nb6.sh        # on Hoffman2 cluster
 ```
 
 Wait for the job to start.
@@ -26,7 +26,7 @@ shown by either the command `qstat -u $USER` or `myjobs`.
 Open another terminal on the local computer, and issue the command:
 
 ```
-$ ssh nXXX /u/local/apps/anaconda3/2020.02/bin/jupyter notebook list
+$ ssh nXXX /u/local/apps/anaconda3/2020.02/bin/jupyter notebook list  # on local computer
 ```
 
 The output will look like:
@@ -50,7 +50,7 @@ if you are running multiple notebooks on the same compute node.
 On your local computer, run the command (or the equivalent on Windows), e.g.
 
 ```
-$ ssh -f -N -L 11111:nXXX:12345 user_name@login1.hoffman2.idre.ucla.edu
+$ ssh -f -N -L 11111:nXXX:12345 user_name@login1.hoffman2.idre.ucla.edu  # on local computer
 ```
 
 Adjust the port number accordingly. For example, if the actual port used on
@@ -84,7 +84,7 @@ by the "jupyter notebook list" command above). In case your local port is not
 available, you can simply try a new port number, e.g. changing it to `11112` (instead of `11111`):
 
 ```
- $ ssh -f -N -L 11112:nXXX:12345
+ $ ssh -f -N -L 11112:nXXX:12345    # on local computer
 ```
 
 In this case, `11112` is your local port number, so point your browser to `http://localhost:11112` instead to connect to the notebook.
