@@ -47,11 +47,13 @@ if you are running multiple notebooks on the same compute node.
 
 ## Step 3
 
-On your local computer, run the command (or the equivalent on Windows), e.g.
+On your local computer, open a terminal to run the command (or do the equivalent on Windows), e.g.
 
 ```
 $ ssh -f -N -L 11111:nXXX:12345 user_name@login1.hoffman2.idre.ucla.edu  # on local computer
 ```
+
+(Enter your Hoffman2 cluster password if needed. There will be no output if succeeded; this is normal.)
 
 Adjust the port number accordingly. For example, if the actual port used on
 the compute node is `12348` instead, the command above would be:
