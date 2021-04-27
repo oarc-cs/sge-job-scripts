@@ -3,8 +3,8 @@
 The job script `nb6.sh` enables you to launch a jupyter notebook on the
 CentOS 6 compute node that can be connected your local computer's browser
 using ssh port forwarding via Hoffman2 cluster's login node (login1 in 
-the following example). While the script itself is short, additional command
-lines need to be issued, as instructed below.
+the following example). While the script itself is short, additional commands
+need to be issued, as instructed below.
 
 ## Step 1
 
