@@ -57,7 +57,9 @@ On your local computer, run the command (or the equivalent on Windows), e.g.
 $ ssh -f -N -L 11111:nXXX:12345 user_name@login1.hoffman2.idre.ucla.edu
 ```
 
-(adjust the port number accordingly. See also "Additional Information" below.)
+Adjust the port number accordingly. For example, if the actual port used on
+the compute node is `12348` instead, the command above would be:
+`ssh -f -N -L 11111:nXXX:12348 ...`. See also "Additional Information" below.
 
 Now point your web browser at: `http://localhost:11111`
 
@@ -66,10 +68,10 @@ When prompted, enter token string from above, e.g. `dee346608015366d1be7f2dd6974
 
 ## Step 4
 
-If you can see the directory listing after entering the token from Step 3, then
-the notebook has been successfully connected to your local web browser.
+At this point, if you can see your Hoffman2 directory listing in the notebook,
+it means the notebook has been successfully connected to your local web browser.
 
-Enjoy jupyter notebook computing!
+Now enjoy Jupyter notebook computing!
 
 ## Step 5 (After your are done)
 
