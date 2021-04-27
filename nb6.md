@@ -73,7 +73,7 @@ Now enjoy Jupyter notebook computing!
 
 ## Step 5 (After your are done)
 
-1. Kill the job (qdel $job_id) if it is still running on Hoffman2 cluster.
+1. Kill the job (e.g. `qdel job_id` where "job_id" is the job number) if it is still running on Hoffman2 cluster.
 2. Terminate the "ssh" processes on your local computer.
 
 
