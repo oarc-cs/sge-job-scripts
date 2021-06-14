@@ -90,3 +90,24 @@ available, you can simply try a new port number, e.g. changing it to `11112` (in
 ```
 
 In this case, `11112` is your local port number, so point your browser to `http://localhost:11112` instead to connect to the notebook.
+
+
+## Alternative approach
+
+(Thanks to Qiyang for suggesting this approach.)
+
+It is possible to create a jupyter kernel that automatically loads a particular conda environment. 
+For example, the following kernel "pegasus" will load the conda environment "pegasus":
+
+```bash
+$ module load anaconda3
+$ source $CONDA_DIR/etc/profile.d/conda.sh
+$ conda activate pegasus
+(pegasus) $ conda install ipykernel   # if not installed
+(pegasus) $ python -m ipykernel install --user --name=pegasus
+$ conda deactivate
+```
+
+The "pegasus" kernel will show up in the kernel list of a Jupyter notebook, e.g.
+
+![image](/uploads/7b4cabb1779b9db56872079309a656e3/image.png)
