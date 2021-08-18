@@ -20,61 +20,31 @@ Wait for the job to start.
 
 ## Step 2
 
+
 Confirm that the job has started (on compute node nXXXX), i.e. in "r" state as 
 shown by either the command `qstat -u $USER` or `myjobs`.
 
-On the login node, issue the command:
+On Hoffman2 login node, run the command:
 
 ```
-$ ssh nXXX /u/local/apps/anaconda3/2020.02/bin/jupyter notebook list  # on local computer
+get-jupyter-port JOB_ID
 ```
 
-The output will look like:
- 
-``` 
- http://XXX.XX.XXX.XXX:12345/?token=dee346608015366d1be7f2dd69743e83cc3578e34476c2cd :: /u/home/...
-```
+and follow the screen instructions. `JOB_ID` is your actual job number (e.g. `get-jupyter-port 99999` if 99999 is your job ID).
 
-We will need this information in the next steps, in particular, the port 
-number i.e. `12345` and the token `dee34...2cd`. You may see multiple entries
-if you are running multiple notebooks on the same compute node.
- 
 
- **NOTE**: the port number in the last command above could be different from
- the `--port=12345` option specified in the job script, since Jupyter will 
- automatically retry to find available ports. Always the port number
- given by `jupyter notebook list` command.
 
 ## Step 3
-
-On your local computer, open a terminal to run the command (or do the equivalent on Windows), e.g.
-
-```
-$ ssh -f -N -L 11111:nXXX:12345 user_name@login1.hoffman2.idre.ucla.edu  # on local computer
-```
-
-(Enter your Hoffman2 cluster password if needed. There will be no output if succeeded; this is normal.)
-
-Adjust the port number accordingly. For example, if the actual port used on
-the compute node is `12348` instead, the command above would be:
-`ssh -f -N -L 11111:nXXX:12348 ...`. See also "Additional Information" below.
-
-Now point your web browser at: `http://localhost:11111`
-
-When prompted, enter token string from above, e.g. `dee346608015366d1be7f2dd69743e83cc3578e34476c2cd`.
-
-
-## Step 4
 
 At this point, if you can see your Hoffman2 directory listing in the notebook,
 it means the notebook has been successfully connected to your local web browser.
 
 Now enjoy Jupyter notebook computing!
 
-## Step 5 (After your are done)
+## Step 4 (After your are done)
 
 1. Kill the job (e.g. `qdel job_id` where "job_id" is the job number) if it is still running on Hoffman2 cluster.
-2. Terminate the "ssh" processes on your local computer.
+2. Terminate the "ssh" processes on your local computer (e.g. by closing the terminal)
 
 
 ## Additional information:
