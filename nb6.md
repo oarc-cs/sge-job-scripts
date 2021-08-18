@@ -23,7 +23,7 @@ Wait for the job to start.
 Confirm that the job has started (on compute node nXXXX), i.e. in "r" state as 
 shown by either the command `qstat -u $USER` or `myjobs`.
 
-In the terminal on the local computer, and issue the command:
+On the login node, issue the command:
 
 ```
 $ ssh nXXX /u/local/apps/anaconda3/2020.02/bin/jupyter notebook list  # on local computer
